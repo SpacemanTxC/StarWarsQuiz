@@ -1,12 +1,14 @@
 // the click function to start the quiz
 document.getElementById("startButton").onclick = function() {
   runStartButton();
+
 }
 
 //workin button from project
 function runStartButton(){
   document.getElementById("startButton").innerHTML = "Welcome to the Star Wars Quiz";
 //console.log("Button Worked ");
+  startTimerButton();
  }
 
 
@@ -29,10 +31,15 @@ function startTimer(duration, display) {
         }
     }, 1000);
 }
-// onload function will work when the page is loaded
-// change to on click when the timer begins
-window.onload = function () {
+
+// button starts the timers
+let startTimerButton = function () {
     var tenMinutes = 60 * 10,
         display = document.querySelector('#timer');
     startTimer(tenMinutes, display);
 };
+
+
+// 10 questions for the quiz
+
+  // need to have mult choice and req to move on to next question

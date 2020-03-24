@@ -7,3 +7,14 @@ make the background image seethrough
 img {
   align-self: center;
 } */
+
+#mainWrapper {
+
+    margin: auto;
+    background: black;
+    padding: 10px;
+    color: green;
+    text-align: center;
+}
+
+/* add so that the page is dynamic  */
