@@ -15,6 +15,10 @@ img {
     padding: 10px;
     color: green;
     text-align: center;
+    opacity: .75;
+
 }
 
 /* add so that the page is dynamic  */
+
+/* text needs to be bold if the section is see through */

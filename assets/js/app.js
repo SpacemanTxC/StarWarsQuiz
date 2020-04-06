@@ -15,6 +15,7 @@ function runStartButton(){
 // over all time for the quiz
 //create timer for quiz
 // Sample Timer
+    // change sample time to not start over if the button has been pressed
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -33,6 +34,7 @@ function startTimer(duration, display) {
 }
 
 // button starts the timers
+if (time )
 let startTimerButton = function () {
     var tenMinutes = 60 * 10,
         display = document.querySelector('#timer');
