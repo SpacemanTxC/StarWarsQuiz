@@ -9,7 +9,7 @@ Star Wars quiz is a web based application built with JS, HTML, and CSS. The proj
 
 
 
-<b>Contact Info:</b>
+<b>Contact Info</b> <br/>
 Profile: https://twcap.github.io/Profile/ <br/>
 Linkedin: https://www.linkedin.com/in/tate-capra/ <br/>
 Email: TateCapra@outlook.com 
