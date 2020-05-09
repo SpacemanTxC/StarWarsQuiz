@@ -4,7 +4,7 @@
   // question will need to display information then answer choices
   // once the answer is selected then the next question appears
   export function questions(q1,q2,q3,q4, q5, q6, q7, q8, q9, q10){
-      
+      i
   }
 
 
