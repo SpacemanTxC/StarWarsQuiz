@@ -45,7 +45,8 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            timer = duration;
+          // alert for times up
+            alert("Times up");
         }
     }, 1000);
 };
@@ -55,6 +56,7 @@ let startTimerButton = function () {
     var tenMinutes = 60 * 10,
         display = document.querySelector('#timer');
     startTimer(tenMinutes, display);
+
 };
 
 //check answer
@@ -67,6 +69,20 @@ let startTimerButton = function () {
 //     inCorrect++;
 //   }
 // };
+
+//Store the values in the new array when the submit button is pushed
+//Check to make sure that all answers are clicked
+// create a new button fuction for the finshed of the test
+function endButton(){
+    console.log("Test for end quiz");
+    //button needs to be called
+    // use timer to check time if 0 then prints out times up
+    if(answerChoices.length != 2) {
+       alert("You Didn't Finish! Try Again Padiwan");
+    }else if(answerChoices.length == 2){
+        alert("TEST Win");
+    }
+};
 
 // create three questions: first one is mult choice, sec is select boxes, third is input box
 starWarsQuiz =`
@@ -90,12 +106,12 @@ starWarsQuiz =`
         <input type="radio" id="Alderaan" name="birthPlanet" value="Alderaan">
         <label for"Alderaan">Alderaan</label>
       </form> <br/>
-    <div id='Q3'>Type The Year of the First Star Wars Movie</div>
+    <div id='Q3'>Type The Year of the First Star Wars Movie</div> <br/>
     <form>
       <input type="text" id="movieYear" name="movieYear">
-      <label for="movieYear">Answer Here</label>
+      <label for="movieYear">: Answer Here</label>
     </form> <br/>
-    <button id='endQuiz'>Finish Quiz</div>
+    <button onclick="endButton()">Finish Quiz</button>
   </div>
 `;
 
