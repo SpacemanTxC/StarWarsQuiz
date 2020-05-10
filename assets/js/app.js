@@ -1,7 +1,13 @@
 
-var starWarsQuiz;
-var correct = 0;
-var inCorrect = 0;
+let starWarsQuiz;
+let correct = 0;
+let inCorrect = 0;
+//questions anwsers for quiz
+let questions = [
+  {questionOne:"Tatooine"},
+  {questionTwo:"Alderaan"},
+  {questionThree:[1977]}
+];
 
 // the click function to start the quiz
 document.getElementById("startButton").onclick = function() {
@@ -85,7 +91,7 @@ starWarsQuiz =`
     <div id='Q3'>Type The Year of the First Star Wars Movie</div>
     <form>
       <input type="text" id="movieYear" name="movieYear">
-      <label for="movieYear"> Answer Here</label>
+      <label for="movieYear">Answer Here</label>
     </form>
     <button id='endQuiz'>Finish Quiz</div>
   </div>
