@@ -1,4 +1,5 @@
-
+// var that will store the correct and incorrect answers
+// star wars quiz creates new html for the page
 let starWarsQuiz;
 let correct = 0;
 let inCorrect = 0;
@@ -6,8 +7,10 @@ let inCorrect = 0;
 let questions = [
   {questionOne:"Tatooine"},
   {questionTwo:"Alderaan"},
-  {questionThree:[1977]}
+  {questionThree: 1977}
 ];
+// empyt array to store answer choices from user
+let answerChoices= [];
 
 // the click function to start the quiz
 document.getElementById("startButton").onclick = function() {
@@ -60,11 +63,10 @@ let startTimerButton = function () {
 //   if(getElementById('Q1') == "Tatooine" && getElementById('Q2') == "Alderan" && getElementById('Q3') == "1977" ){
 //     correct = 3;
 //     inCorrect = 0;
-//   }else if(){
+//   }else if(getElementById('Q1') == "Tatooine" && getElementById('Q2') == "Alderan" && getElementById('Q3') == "1977" ){
 //     inCorrect++;
 //   }
 // };
-// stores quiz question
 
 // create three questions: first one is mult choice, sec is select boxes, third is input box
 starWarsQuiz =`
@@ -78,7 +80,7 @@ starWarsQuiz =`
         <label for"Tatooine">Tatooine</label>
         <input type="radio" id="Endor" name="birthPlanet" value="Endor">
         <label for"Endor">Endor</label>
-      </form>
+      </form> <br/>
     <div id='Q2'>What Planet was first Destoried by the Death Star</div>
       <form>
         <input type="radio" id="Exogal" name="birthPlanet" value="Exogal">
@@ -87,12 +89,12 @@ starWarsQuiz =`
         <label for"Naboo">Naboo</label>
         <input type="radio" id="Alderaan" name="birthPlanet" value="Alderaan">
         <label for"Alderaan">Alderaan</label>
-      </form>
+      </form> <br/>
     <div id='Q3'>Type The Year of the First Star Wars Movie</div>
     <form>
       <input type="text" id="movieYear" name="movieYear">
       <label for="movieYear">Answer Here</label>
-    </form>
+    </form> <br/>
     <button id='endQuiz'>Finish Quiz</div>
   </div>
 `;

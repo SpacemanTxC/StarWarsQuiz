@@ -19,6 +19,11 @@ img {
 
 }
 
+
+#titleBanner {
+    font-size:50px;
+    color: gold;
+}
 /* add so that the page is dynamic  */
 
 /* text needs to be bold if the section is see through */
