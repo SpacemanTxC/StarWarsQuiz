@@ -75,12 +75,19 @@ let startTimerButton = function () {
 // create a new button fuction for the finshed of the test
 function endButton(){
     console.log("Test for end quiz");
+    //push values first before if statement
+      answerChoices.push()
     //button needs to be called
     // use timer to check time if 0 then prints out times up
     if(answerChoices.length != 2) {
        alert("You Didn't Finish! Try Again Padiwan");
     }else if(answerChoices.length == 2){
         alert("TEST Win");
+        // let firstAnswer = an1;
+        // let secondAnswer = an2;
+        // let thirdAnswer = an3;
+        // answerChoices.push(firstAnswer, secondAnswer, thirdAnswer)
+        // create if else statement to check each answer
     }
 };
 
@@ -88,29 +95,25 @@ function endButton(){
 starWarsQuiz =`
   <p id= 'timer'>Timer</p>
   <div id='questions'>
-    <div id='Q1'>Where was did Luke Skywalker Grow Up</div>
-      <form>
-        <input type="radio" id="Hoth" name="birthPlanet" value="Hoth">
-        <label for"Hoth">Hoth</label>
-        <input type="radio" id="Tatooine" name="birthPlanet" value="Tatooine">
-        <label for"Tatooine">Tatooine</label>
-        <input type="radio" id="Endor" name="birthPlanet" value="Endor">
-        <label for"Endor">Endor</label>
-      </form> <br/>
-    <div id='Q2'>What Planet was first Destoried by the Death Star</div>
-      <form>
-        <input type="radio" id="Exogal" name="birthPlanet" value="Exogal">
-        <label for"Exogal">Exogal</label>
-        <input type="radio" id="Naboo" name="birthPlanet" value="Naboo">
-        <label for"Naboo">Naboo</label>
-        <input type="radio" id="Alderaan" name="birthPlanet" value="Alderaan">
-        <label for"Alderaan">Alderaan</label>
-      </form> <br/>
-    <div id='Q3'>Type The Year of the First Star Wars Movie</div> <br/>
-    <form>
-      <input type="text" id="movieYear" name="movieYear">
-      <label for="movieYear">: Answer Here</label>
-    </form> <br/>
+
+          <h3>Where was did Luke Skywalker Grow Up?</h3>
+          <form id="Q1">
+              <input type="radio" name="Q1" value="Hoth"><label>Hoth</label>
+              <input type="radio" name="Q1" value="Tatooine"><label>Tatooine</label>
+              <input type="radio" name="Q1" value="Endor"><label>Endor</label>
+          </form>
+
+          <h3>What planet did the Death Star blow up?</h3>
+          <form id="Q2">
+              <input type="radio" name="Q2" value="Exogal"><label>Exogal</label>
+              <input type="radio" name="Q2" value="Yavin 4"><label>Yavin 4</label>
+              <input type="radio" name="Q2" value="Aldreaan"><label>Aldreaan</label>
+          </form>
+
+          <h3>What year did Star War first come out?</h3>
+          <form id="Q3">
+              <input type="text" name="Q3"><label>Enter Text Here</label>
+          </form>  <br/>
     <button onclick="endButton()">Finish Quiz</button>
   </div>
 `;
