@@ -54,46 +54,55 @@ let startTimerButton = function () {
 };
 
 //Add values
-//FIXING ****************************************
 function addValues(){
-    let value1 = document.getElementById('Q1').value;
-    let value2 = document.getElementById('Q2').value;
-    let value3 = document.getElementById('Q3').value;
+  if(answerChoices.length == 0){
+    let value1 = document.querySelector('input[name="Q1"]:checked');
+    let value2 = document.querySelector('input[name="Q2"]:checked');
+    let value3 = document.querySelector('input[name="Q3"]');
 
-    answerChoices.push(value1);
-    answerChoices.push(value2);
-    answerChoices.push(value3);
-    console.log(value1);
+   let answerChoices = {
+      'Q1' : value1.value,
+      'Q2' : value2.value,
+      'Q3' : value3.value
+   }
 
+ }else{
+    alert("Test Already Taken");
+ }
+    // console the hole values
+    console.log(answerChoices);
 
-}
+    // console single value
+    console.log(answerChoices.Q1);
+};
+
 //Store the values in the new array when the submit button is pushed
 //Check to make sure that all answers are clicked
-// create a new button fuction for the finshed of the test
-function endButton(){
-    console.log("Test for end quiz");
-    //Call addValues
-    addValues();
-    // Check Array length for finsihed quiz
-    if(answerChoices.length <= 1) {
-       alert("You Didn't Finish! Try Again Padiwan");
-    }else if(answerChoices.length >= 2){
-        alert("TEST Win");
-        //********************************************************
-        //Add Winning Statement with Score
-    }
-};
+// // create a new button fuction for the finshed of the test
+// function endButton(){
+//     //Call addValues
+//     addValues();
+//     // Check Array length for finsihed quiz
+//     if(answerChoices.length < 1) {
+//        alert("You Didn't Finish! Try Again Padiwan");
+//     }else if(answerChoices.length >= 2){
+//         alert("TEST Win");
+//         //********************************************************
+//         //Add Winning Statement with Score
+//     }
+// };
+
 
 // New html for main wrapper that adds quiz questions
 starWarsQuiz =`
   <p id= 'timer'>Timer</p>
   <div id='questions'>
 
-          <h3>Where was did Luke Skywalker Grow Up?</h3>
+          <h3>Where did Luke Skywalker Grow Up?</h3>
           <form id="Q1">
-              <input type="radio" name="birthPlanet"  id="Hoth" value="Hoth" /><label>Hoth</label>
-              <input type="radio" name="birthPlanet"  id="Tatooine" value="Tatooine" /><label>Tatooine</label>
-              <input type="radio" name="birthPlanet"  id="Endor" value="Endor" /><label>Endor</label>
+              <input type="radio" name="Q1"  id="Hoth" value="Hoth" /><label>Hoth</label>
+              <input type="radio" name="Q1"  id="Tatooine" value="Tatooine" /><label>Tatooine</label>
+              <input type="radio" name="Q1"  id="Endor" value="Endor" /><label>Endor</label>
           </form>
 
           <h3>What planet did the Death Star blow up?</h3>
@@ -107,6 +116,6 @@ starWarsQuiz =`
           <form id="Q3">
               <input type="text" name="Q3" id="Q3" /><label>Enter Text Here</label>
           </form>  <br/>
-    <button onclick="endButton()">Finish Quiz</button>
+    <button onclick="addValues()">Finish Quiz</button>
   </div>
 `;
