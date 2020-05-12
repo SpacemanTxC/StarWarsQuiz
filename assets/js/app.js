@@ -55,7 +55,6 @@ let startTimerButton = function () {
 
 //Add values
 function addValues(){
-  if(answerChoices.length == 0){
     let value1 = document.querySelector('input[name="Q1"]:checked');
     let value2 = document.querySelector('input[name="Q2"]:checked');
     let value3 = document.querySelector('input[name="Q3"]');
@@ -66,9 +65,7 @@ function addValues(){
       'Q3' : value3.value
    }
 
- }else{
-    alert("Test Already Taken");
- }
+
     // console the hole values
     console.log(answerChoices);
 
@@ -76,6 +73,7 @@ function addValues(){
     console.log(answerChoices.Q1);
 };
 
+//*******************Working On***********************************************
 //Store the values in the new array when the submit button is pushed
 //Check to make sure that all answers are clicked
 // // create a new button fuction for the finshed of the test
@@ -87,8 +85,6 @@ function addValues(){
 //        alert("You Didn't Finish! Try Again Padiwan");
 //     }else if(answerChoices.length >= 2){
 //         alert("TEST Win");
-//         //********************************************************
-//         //Add Winning Statement with Score
 //     }
 // };
 
@@ -109,7 +105,7 @@ starWarsQuiz =`
           <form id="Q2">
               <input type="radio" name="Q2"  id="Q2" value="Exogal" /><label>Exogal</label>
               <input type="radio" name="Q2"  id="Q2" value="Yavin 4" /><label>Yavin 4</label>
-              <input type="radio" name="Q2"  id="Q2" value="Aldreaan" /><label>Aldreaan</label>
+              <input type="radio" name="Q2"  id="Q2" value="Alderaan" /><label>Alderaan</label>
           </form>
 
           <h3>What year did Star War first come out?</h3>
