@@ -58,17 +58,8 @@ function addValues(){
     // store global
    answerChoices =[value1.value, value2.value, value3.value ]
 
-    // console the hole values
-    console.log(answerChoices);
-
-    // console single value
-    console.log(answerChoices[0]);
-
-    console.log(questions)
-
+   // call check anwsers to compare values
     checkAnswers();
-    console.log(correct);
-    console.log(inCorrect);
 
 };
 
@@ -81,8 +72,8 @@ function checkAnswers(){
           inCorrect--
         }
      }
-     alert("Number Correct: " + correct  +" Number Incorrect: " + inCorrect);
-     alert("Try again Padiwan");
+     //call submit function
+     submit();
 }
 
 
@@ -114,3 +105,27 @@ starWarsQuiz =`
     <button onclick="addValues()">Finish Quiz</button>
   </div>
 `;
+
+
+function submit(){
+    document.getElementById('mainWrapper').innerHTML = starWarsSubmit;
+    // var to store correct and incorrect
+    let finalScoreCorr = correct;
+    let finalScoreInCorr = inCorrect;
+    // show number correct and incorrect
+    document.getElementById('finalScoreCorr').innerHTML = finalScoreCorr;
+    document.getElementById('finalScoreInCorr').innerHTML = inCorrect;
+  }
+
+// final changes to quiz
+starWarsSubmit = `
+  <div id = "submit">
+    <h3>Number Correct: <p id= finalScoreCorr></p> </h3>
+    <h3>Number Incorrect <p id= finalScoreInCorr></p> </h3>
+    <button onclick="tryAgainButton()">Try Again</button>
+  </div>
+`
+  // reload homepage
+function tryAgainButton(){
+  location.reload();
+}
