@@ -7,7 +7,9 @@ Star Wars quiz is a web based application built with JS, HTML, and CSS. The proj
 
 <h3>May the Force Be With You</h3>
 
-*Program Inprogress (Not Finished)*
+Star Wars Quiz Link: https://twcap.github.io/StarWarsQuiz/
+
+*Update 5/13 Star Wars Quiz 1.0*
 
 <b>Contact Info</b> <br/>
 Profile: https://twcap.github.io/Profile/ <br/>
