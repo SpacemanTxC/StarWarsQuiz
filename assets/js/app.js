@@ -55,11 +55,7 @@ function addValues(){
     let value2 = document.querySelector('input[name="Q2"]:checked');
     let value3 = document.querySelector('input[name="Q3"]');
 
-   // let answerChoices = {
-   //    '0' : value1.value,
-   //    '1' : value2.value,
-   //    '2' : value3.value
-   // }
+    // store global
    answerChoices =[value1.value, value2.value, value3.value ]
 
     // console the hole values
@@ -76,21 +72,7 @@ function addValues(){
 
 };
 
-//*******************Working On***********************************************
-//Store the values in the new array when the submit button is pushed
-//Check to make sure that all answers are clicked
-// // create a new button fuction for the finshed of the test
-// function endButton(){
-//     //Call addValues
-//     addValues();
-//     // Check Array length for finsihed quiz
-//     if(answerChoices.length < 1) {
-//        alert("You Didn't Finish! Try Again Padiwan");
-//     }else if(answerChoices.length >= 2){
-//         alert("TEST Win");
-//     }
-// };
-
+// compares values of both arrays
 function checkAnswers(){
      for(i = 0; i < 3; i++){
         if(answerChoices[i] == questions[i]){
@@ -99,7 +81,8 @@ function checkAnswers(){
           inCorrect--
         }
      }
-
+     alert("Number Correct: " + correct  +" Number Incorrect: " + inCorrect);
+     alert("Try again Padiwan");
 }
 
 
