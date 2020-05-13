@@ -4,11 +4,7 @@ let starWarsQuiz;
 let correct = 0;
 let inCorrect = 0;
 //questions anwsers for quiz
-let questions = [
-  {questionOne:"Tatooine"},
-  {questionTwo:"Alderaan"},
-  {questionThree: 1977}
-];
+let questions = ["Tatooine", "Alderaan", 1977];
 // empyt array to store answer choices from user answers
 let answerChoices= [];
 
@@ -71,6 +67,13 @@ function addValues(){
 
     // console single value
     console.log(answerChoices.Q1);
+
+    console.log(questions)
+
+    questions.forEach(checkAnswers);
+    console.log(correct);
+    console.log(inCorrect);
+
 };
 
 //*******************Working On***********************************************
@@ -87,6 +90,19 @@ function addValues(){
 //         alert("TEST Win");
 //     }
 // };
+
+function checkAnswers(){
+     // for(i = 0; i <= answerChoices.length; i++){
+     //    if(answerChoices.i == questions.i){
+     //       return correct++
+     //    }else{
+     //      return inCorrect--
+     //    }
+     // }
+
+}
+
+
 
 
 // New html for main wrapper that adds quiz questions
