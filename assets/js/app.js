@@ -4,7 +4,7 @@ let starWarsQuiz;
 let correct = 0;
 let inCorrect = 0;
 //questions anwsers for quiz
-let questions = ["Tatooine", "Alderaan", 1977];
+let questions = ["Tatooine", "Alderaan", "1977"];
 // empyt array to store answer choices from user answers
 let answerChoices= [];
 
@@ -55,22 +55,22 @@ function addValues(){
     let value2 = document.querySelector('input[name="Q2"]:checked');
     let value3 = document.querySelector('input[name="Q3"]');
 
-   let answerChoices = {
-      'Q1' : value1.value,
-      'Q2' : value2.value,
-      'Q3' : value3.value
-   }
-
+   // let answerChoices = {
+   //    '0' : value1.value,
+   //    '1' : value2.value,
+   //    '2' : value3.value
+   // }
+   answerChoices =[value1.value, value2.value, value3.value ]
 
     // console the hole values
     console.log(answerChoices);
 
     // console single value
-    console.log(answerChoices.Q1);
+    console.log(answerChoices[0]);
 
     console.log(questions)
 
-    questions.forEach(checkAnswers);
+    checkAnswers();
     console.log(correct);
     console.log(inCorrect);
 
@@ -92,13 +92,13 @@ function addValues(){
 // };
 
 function checkAnswers(){
-     // for(i = 0; i <= answerChoices.length; i++){
-     //    if(answerChoices.i == questions.i){
-     //       return correct++
-     //    }else{
-     //      return inCorrect--
-     //    }
-     // }
+     for(i = 0; i < 3; i++){
+        if(answerChoices[i] == questions[i]){
+          correct++
+        }else{
+          inCorrect--
+        }
+     }
 
 }
 
