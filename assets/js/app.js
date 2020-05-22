@@ -24,7 +24,7 @@ function runStartButton(){
 
 // Timer
 function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
+    let timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
@@ -43,7 +43,7 @@ function startTimer(duration, display) {
 
 // Button starts the timers
 let startTimerButton = function () {
-    var tenMinutes = 60 * 10,
+    let tenMinutes = 60 * 10,
         display = document.querySelector('#timer');
     startTimer(tenMinutes, display);
 
@@ -114,11 +114,11 @@ function submit(){
     let finalScoreInCorr = inCorrect;
     // show number correct and incorrect
     document.getElementById('finalScoreCorr').innerHTML = finalScoreCorr;
-    document.getElementById('finalScoreInCorr').innerHTML = inCorrect;
+    document.getElementById('finalScoreInCorr').innerHTML = finalScoreInCorr;
   }
 
 // final changes to quiz
-starWarsSubmit = `
+let starWarsSubmit = `
   <div id = "submit">
     <h3>Number Correct: <p id= finalScoreCorr></p> </h3>
     <h3>Number Incorrect <p id= finalScoreInCorr></p> </h3>
