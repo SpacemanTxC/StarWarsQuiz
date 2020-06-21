@@ -9,14 +9,17 @@ let questions = ["Tatooine", "Alderaan", "1977"];
 let answerChoices= [];
 
 // Function to start quiz and timer
-document.getElementById("startButton").onclick = function() {
+// document.getElementById("startButton").onclick = function() {
+//   runStartButton();
+// }
+$("#startButton").click(function(){
   runStartButton();
-}
-
+});
 //working button from project
 function runStartButton(){
   // Replaces html wiht Star Wars Quiz Questions
-  document.getElementById('mainWrapper').innerHTML = starWarsQuiz;
+  // document.getElementById('mainWrapper').innerHTML = starWarsQuiz;
+  $('#mainWrapper').html(starWarsQuiz);
   //Declair Timer
   startTimerButton();
  }
@@ -44,19 +47,21 @@ function startTimer(duration, display) {
 // Button starts the timers
 let startTimerButton = function () {
     let tenMinutes = 60 * 10,
-        display = document.querySelector('#timer');
+    // display = document.querySelector('#timer');
+    display = $('#timer').html();
     startTimer(tenMinutes, display);
-
 };
 
 //Add values
 function addValues(){
-    let value1 = document.querySelector('input[name="Q1"]:checked');
-    let value2 = document.querySelector('input[name="Q2"]:checked');
-    let value3 = document.querySelector('input[name="Q3"]');
-
+    // let value1 = document.querySelector('input[name="Q1"]:checked');
+    // let value2 = document.querySelector('input[name="Q2"]:checked');
+    // let value3 = document.querySelector('input[name="Q3"]');
+    let value1 = $('input[type=radio][name="Q1"]:checked').val();
+    let value2 = $('input[type=radio][name="Q2"]:checked').val();
+    let value3 = $('input[name="Q3"]').val();
     // store global
-   answerChoices =[value1.value, value2.value, value3.value ]
+   answerChoices =[value1, value2, value3 ];
 
    // call check anwsers to compare values
     checkAnswers();
@@ -108,13 +113,17 @@ starWarsQuiz =`
 
 
 function submit(){
-    document.getElementById('mainWrapper').innerHTML = starWarsSubmit;
+    // document.getElementById('mainWrapper').innerHTML = starWarsSubmit;
+    $('#mainWrapper').html(starWarsSubmit);
+
     // var to store correct and incorrect
     let finalScoreCorr = correct;
     let finalScoreInCorr = inCorrect;
     // show number correct and incorrect
-    document.getElementById('finalScoreCorr').innerHTML = finalScoreCorr;
-    document.getElementById('finalScoreInCorr').innerHTML = finalScoreInCorr;
+    // document.getElementById('finalScoreCorr').innerHTML = finalScoreCorr;
+    // document.getElementById('finalScoreInCorr').innerHTML = finalScoreInCorr;
+    $('#finalScoreCorr').html(finalScoreCorr);
+    $('#finalScoreInCorr').html(finalScoreInCorr);
   }
 
 // final changes to quiz

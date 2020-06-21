@@ -1,13 +1,8 @@
+/* background image */
 body {
   background-image: url('../photo/starWarsBackground.jpg');
 }
-/*
-
-make the background image seethrough
-img {
-  align-self: center;
-} */
-
+/* style for quiz wrapper */
 #mainWrapper {
     margin: auto;
     background: black;
@@ -16,13 +11,9 @@ img {
     text-align: center;
     opacity: .75;
 }
-
-
+/* style for title banner */
 #titleBanner {
     font-size:50px;
     color: gold;
     font-weight: 400;
 }
-/* add so that the page is dynamic  */
-
-/* text needs to be bold if the section is see through */
