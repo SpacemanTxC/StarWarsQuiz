@@ -1,19 +1,67 @@
 /* background image */
 body {
   background-image: url('../photo/starWarsBackground.jpg');
+  height: 100%;
+  width: 100%;
 }
-/* style for quiz wrapper */
-#mainWrapper {
-    margin: auto;
+html {
+  height: 100%;
+  width: 100%;
+}
+/* style main container*/
+.container{
     background: black;
-    padding: 10px;
     color: green;
     text-align: center;
     opacity: .75;
+    height: 100%;
+    width: 100%;
 }
+/* Rows position */
+.titleSuper{
+  position: relative;
+  top: 25%;
+}
+.startButtonSuper{
+  position: relative;
+  top: 30%;
+  font-size:50px;
+}
+.footerSuper{
+  position: relative;
+  top: 35%;
+  font-size: 35px;
+}
+/* style new wrapper */
+.timerSuper{
+  position: relative;
+  top: 10%;
+  font-size: 50px;
+}
+.quizSuper{
+  position: relative;
+  top: 25%;
+  font-size: 50px;
+}
+.finishButtonSuper{
+  position: relative;
+  top: 22%;
+  font-size: 35px;
+}
+/* style for number correct*/
+.answerSuper{
+  position: relative;
+  top: 25%;
+  font-size: 50px;
+}
+
 /* style for title banner */
 #titleBanner {
-    font-size:50px;
+    font-size:100px;
     color: gold;
     font-weight: 400;
+}
+
+#mainWrapper{
+  object-fit: fill;
 }
